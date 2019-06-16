@@ -12,6 +12,7 @@ namespace SalesWebMVC.Models
         public DateTime BirthDate { get; set; }
         public double BaseSalary { get; set; }
         public Department Department { get; set; } // Associação da classe Department com Seller
+        public int DepartmentId { get; set; } // Com isso o campo na tabela Seller se torna uma FOREIGN KEY NOT NULL no BD
         public ICollection<SalesRecord> Sales { get; set; } = new List<SalesRecord>(); // Associação da classe SalesRecord com Seller
 
         public Seller()
